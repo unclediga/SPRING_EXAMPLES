@@ -48,4 +48,16 @@ public class GreetingController {
         model.put("messages", messages);
         return "main";
     }
+
+    @PostMapping("/filter")
+    public String filter(@RequestParam String filter, Map<String, Object> model) {
+        final Iterable<Message> messages;
+        if (filter != null && !filter.isEmpty()) {
+            messages = messageRepo.findByTag(filter);
+        } else {
+            messages = messageRepo.findAll();
+        }
+        model.put("messages", messages);
+        return "main";
+    }
 }
