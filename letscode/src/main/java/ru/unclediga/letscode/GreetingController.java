@@ -17,17 +17,10 @@ public class GreetingController {
     private MessageRepo messageRepo;
 
     @GetMapping("/greeting")
-    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-                           Model model) {
-        model.addAttribute("name", name);
-        return "greeting";
-    }
-
-    @GetMapping("/greetingM")
     public String greeting2(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
                             Map<String, Object> model) {
         model.put("name", name);
-        return "greetingM";
+        return "greeting";
     }
 
     @GetMapping("/letscode")
