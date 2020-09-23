@@ -5,7 +5,7 @@
 
 ### Getting Started Guides
 * serving-web-content : "Serving Web Content with Spring MVC",
-* Spring Guide "Accessing data with MySQL";
+* accessing-data-mysql: "Accessing data with MySQL";
      
    
      
