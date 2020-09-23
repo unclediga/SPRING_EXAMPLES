@@ -16,21 +16,19 @@ public class GreetingController {
     @Autowired
     private MessageRepo messageRepo;
 
-    @GetMapping("/greeting")
-    public String greeting2(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-                            Map<String, Object> model) {
-        model.put("name", name);
+    @GetMapping("/")
+    public String greeting() {
         return "greeting";
     }
 
-    @GetMapping("/letscode")
+    @GetMapping("/main")
     public String main(Map<String, Object> model) {
         final Iterable<Message> messages = messageRepo.findAll();
         model.put("messages", messages);
         return "main";
     }
 
-    @PostMapping("/letscode")
+    @PostMapping("/main")
     public String add(@RequestParam String text,
                       @RequestParam String tag,
                       Map<String, Object> model) {
