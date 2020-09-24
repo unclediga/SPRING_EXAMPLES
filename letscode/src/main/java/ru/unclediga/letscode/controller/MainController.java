@@ -1,4 +1,4 @@
-package ru.unclediga.letscode;
+package ru.unclediga.letscode.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +12,7 @@ import ru.unclediga.letscode.repo.MessageRepo;
 import java.util.Map;
 
 @Controller
-public class GreetingController {
+public class MainController {
     @Autowired
     private MessageRepo messageRepo;
 
