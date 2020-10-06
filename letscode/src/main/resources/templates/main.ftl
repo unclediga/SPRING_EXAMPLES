@@ -14,9 +14,8 @@
 </div>
 <div>Список сообщений</div>
 <div>
-    <form method="post" action="filter">
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <input type="text" name="filter"/>
+    <form method="get" action="main">
+        <input type="text" name="filter" value="${filter}" />
         <button type="submit">Найти</button>
     </form>
 </div>
